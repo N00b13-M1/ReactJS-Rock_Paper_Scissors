@@ -1,0 +1,164 @@
+.body{
+    margin: 14% 8%;
+    position: relative;
+    margin-bottom: 3%;
+}
+
+.body .border1{
+    display: flex;
+    margin: auto auto;
+    justify-content: center;
+    align-items: center;
+    height: 135px;
+    width: 135px;
+    background-color:hsl(230, 89%, 65%);
+    border-radius: 50%;
+    box-shadow: 0px 10px 0px 0px hsl(230, 89%,40%);
+    position: absolute;
+    top: -25%;
+    left: 33%;
+    transition: transform 0.2s
+
+}
+
+.body .border1:hover{
+    transform: scale(1.1)
+}
+
+
+.body .border2{
+    display: flex;
+    margin: auto auto;
+    justify-content: center;
+    align-items: center;
+    height: 135px;
+    width: 135px;
+    background-color: hsl(349, 70%, 56%);
+    border-radius: 50%;
+    box-shadow: 0px 10px 0px 0px hsl(349, 71%,40%);
+    position: absolute;
+    bottom: -10%;
+    left: 44%;
+    transition: transform 0.2s
+}
+
+.body .border2:hover{
+    transform: scale(1.1)
+}
+
+.body .border3{
+    display: flex;
+    margin: auto auto;
+    justify-content: center;
+    align-items: center;
+    height: 135px;
+    width: 135px;
+    background-color:hsl(40, 84%, 53%);
+    border-radius: 50%;
+    box-shadow: 0px 10px 0px 0px hsl(39, 89%,40%);
+    position: absolute;
+    top: -25%;
+    right: 33%;
+    transition: transform 0.2s
+
+}
+
+.body .border3:hover{
+    transform: scale(1.1)
+}
+
+.body .button .paper{
+    padding: 21px 29px;
+    box-shadow: 0px 11px 3px -5px #ABB0C7 inset;
+}
+
+.body .button .rock{
+    padding: 24px 28px;
+    box-shadow: 0px 11px 3px -5px #ABB0C7 inset;
+}
+
+.body .button .scissors{
+    padding: 22px 27px;
+    box-shadow: 0px 11px 3px -5px #ABB0C7 inset;
+}
+
+
+/*Media Query for Mobile Devices*/
+
+@media (max-width: 320px) {
+    .body{
+        margin: 30% 10%;
+    }
+
+    .body .border1{
+        top: -25%;
+        left: -12%;
+    }
+    .body .border2{
+        top: 33%;
+        left: 22%;
+    }
+    .body .border3{
+        top: -25%;
+        right: -12%;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+        .body{
+            margin: 20% 10%;
+        }
+    
+        .body .border1{
+            top: -25%;
+            left: -12%;
+        }
+        .body .border2{
+            top: 33%;
+            left: 26%;
+        }
+        .body .border3{
+            top: -25%;
+            right: -12%;
+        }
+}
+
+@media (min-width: 376px) and (max-width: 768px){
+    .body{
+        margin: 17% 0%;
+        margin-bottom: 5%;
+    }
+    
+    .body .border1{
+        top: -25%;
+        left: 25%;
+    }
+    .body .border2{
+        top: 55%;
+        left: 40%;
+    }
+    .body .border3{
+        top: -25%;
+        right: 25%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+    .body{
+        margin: 12% 0%;
+        margin-bottom: 5%;
+    }
+    
+    .body .border1{
+        top: -20%;
+        left: 32%;
+    }
+    .body .border2{
+        top: 55%;
+        left: 44%;
+    }
+    .body .border3{
+        top: -20%;
+        right: 31%;
+    }
+}

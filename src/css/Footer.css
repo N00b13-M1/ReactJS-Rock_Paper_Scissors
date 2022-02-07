@@ -1,0 +1,32 @@
+.row .col-12 button{
+    border: 3px solid hsl(217, 16%, 45%);
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 18px
+}
+
+.row{
+}
+
+.row .col-12{
+    margin: 5px 0
+}
+
+/* @media (max-width: 320px) {
+    .row .col-2{
+        margin: 0
+    }
+    .row{
+        margin: 0 auto
+    }
+}
+
+@media (min-width: 321px) and (max-width: 375px) {
+    .row .col-2{
+    }
+    .row{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center
+    }
+} */
