@@ -1,22 +1,6 @@
 import React, { Component } from 'react';
 import '../css/Body.css'
 
-// // function sayHello(){
-// //     console.log('----------------');
-// //     console.log('Hello');
-// //     console.log('----------------');
-// // }
-
-// // sayHello();
-
-// function salesTax(amount){
-//     let result = amount * 0.21;
-//     return result;
-// }
-
-// salesTax(100)
-// console.log(salesTax(100))
-
 
 class Body extends Component {
     render() {

@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React, { Component,useState } from 'react';
 import '../css/Footer.css'
 import Modal from './Modal';
 
 class Footer extends Component {
+    const []
     render() {
         return (
             <>
