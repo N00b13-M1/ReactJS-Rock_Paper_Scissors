@@ -54,8 +54,8 @@ class Body extends Component {
                         </button>
                     </div>
                 </div>
-            }
-            {this.state.etape === "2" &&
+                }
+                {this.state.etape === "2" &&
             // <div className="body-2"> 
             //     <div className="circle-left border border-2 rounded-circle d-inline">
             //         test
@@ -64,22 +64,43 @@ class Body extends Component {
             //         test
             //     </div>
             // </div>
-                <div className="body-2 row justify-content-center align-items-center">
-                    <div className="col-lg-6 col-md-6 col-12 justify-content-center align-items-center text-center">
-                        <div className="circle-right">
-                            test
-                        </div>
-                        <h5>YOU PICKED</h5>
+                    <div className="body row justify-content-center align-items-center">
+                        <div className="column1 col-lg-6 col-md-6 col-12 justify-content-center align-items-center text-center">
+                            {
+                                this.state.choix === "paper" &&
 
-                    </div>
-                    <div className="col-lg-6 col-md-6 col-12 justify-content-center align-items-center text-center">
-                    <div className="circle-right">
-                            test
+                            <div className="button border1">
+                                <button className="border paper rounded-circle" onClick={() => this.choix("paper")}>
+                                    <img src="./img/icon-paper.svg" alt="paper" className="img-fluid" />
+                                </button>
+                            </div>
+
+                            }
+                            {
+                                this.state.choix=== "rock" &&
+                            <div className="button border2">
+                                <button className="border rock rounded-circle" onClick={() => this.choix("rock")}>
+                                    <img src="./img/icon-rock.svg" alt="rock" className="img-fluid" />
+                                </button>
+                            </div>
+                            }
+                            {
+                                this.state.choix === "scissors" &&
+                            <div className="button border3">
+                                <button className="border scissors rounded-circle" onClick={() => this.choix("scissors")}>
+                                    <img src="./img/icon-scissors.svg" alt="scissors" className="img-fluid" />
+                                </button>
+                            </div>
+                            }
+                            <h5>YOU PICKED</h5>
                         </div>
-                        <h5>THE HOUSE PICKED</h5>
+                        <div className="column2 col-lg-6 col-md-6 col-12 justify-content-center align-items-center text-center">
+                            <div className="circle-right">
+                            </div>
+                            <h5>THE HOUSE PICKED</h5>
+                        </div>
                     </div>
-                </div>
-            }
+                }
         <Footer modal={this.state.modal} showModal={this.showModal}/>
 
             </>
