@@ -24,7 +24,7 @@ class Header extends Component {
                             </span>
                             {/* <div className="score-box_score"></div> */}
                             <span className="score-digit">
-                                12
+                                {this.props.score}
                             </span>
                         </div>
                     </div>

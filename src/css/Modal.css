@@ -1,0 +1,32 @@
+.modal-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.modal_header{
+    display: flex;
+    justify-content: space-between;
+    margin: 5%
+}
+
+.modal_header h2{
+    color: hsl(229, 25%, 31%);
+    font-size: 30px;
+    margin: auto 0
+}
+
+.modal_header button{
+    border: none;
+    background: transparent;
+
+}
+
+.modal-box img{
+    padding: 5%
+}
