@@ -14,7 +14,6 @@ class Modal extends Component {
                                 let modal = document.getElementsByClassName('modal-container')[0];
                                 modal.classList.add("d-none")
                                 modal.classList.remove("modal-container")
-                                console.log(modal)
                             }}>
                                 <img src="./img/icon-close.svg" className="img-fluid" alt="X" />
                             </button>

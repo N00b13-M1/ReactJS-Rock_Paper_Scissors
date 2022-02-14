@@ -30,40 +30,40 @@ class Body extends Component {
     }
 
     validate = () => {
-        let possibilite = ["paper", "rock", "scissors"]
-        let stateCopy = { ...this.state }
-        stateCopy.choixOrdi = possibilite[Math.floor(Math.random() * possibilite.length)]
-        if (stateCopy.choix === "paper" && stateCopy.choixOrdi === "rock") {
-            stateCopy.gagnant = "Michael"
-            stateCopy.score++
-        } else if (stateCopy.choix === "rock" && stateCopy.choixOrdi === "scissors") {
-            stateCopy.gagnant = "Michael"
-            stateCopy.score++
-        } else if (stateCopy.choix === "scissors" && stateCopy.choixOrdi === "paper") {
-            stateCopy.gagnant = "Michael"
-            stateCopy.score++
-        } else if (stateCopy.choixOrdi === "paper" && stateCopy.choix === "rock") {
-            stateCopy.gagnant = "Computer"
-            stateCopy.score--
-        } else if (stateCopy.choixOrdi === "rock" && stateCopy.choix === "scissors") {
-            stateCopy.gagnant = "Computer"
-            stateCopy.score--
-        } else if (stateCopy.choixOrdi === "scissors" && stateCopy.choix === "paper") {
-            stateCopy.gagnant = "Computer"
-            stateCopy.score--
+        let possibilities = ["paper", "rock", "scissors"]
+        let copyState = { ...this.state }
+        copyState.choixOrdi = possibilities[Math.floor(Math.random() * possibilities.length)]
+        if (copyState.choix === "paper" && copyState.choixOrdi === "rock") {
+            copyState.gagnant = "Michael"
+            copyState.score++
+        } else if (copyState.choix === "rock" && copyState.choixOrdi === "scissors") {
+            copyState.gagnant = "Michael"
+            copyState.score++
+        } else if (copyState.choix === "scissors" && copyState.choixOrdi === "paper") {
+            copyState.gagnant = "Michael"
+            copyState.score++
+        } else if (copyState.choixOrdi === "paper" && copyState.choix === "rock") {
+            copyState.gagnant = "Computer"
+            copyState.score--
+        } else if (copyState.choixOrdi === "rock" && copyState.choix === "scissors") {
+            copyState.gagnant = "Computer"
+            copyState.score--
+        } else if (copyState.choixOrdi === "scissors" && copyState.choix === "paper") {
+            copyState.gagnant = "Computer"
+            copyState.score--
         } else {
-            stateCopy.gagnant = "Draw"
+            copyState.gagnant = "Draw"
         }
 
-        this.setState(stateCopy)
+        this.setState(copyState)
     }
     playAgain = () => {
-        let stateCopy = { ...this.state }
-        stateCopy.etape = "1"
-        stateCopy.gagnant = ""
-        stateCopy.choix = ""
-        stateCopy.choixOrdi = ""
-        this.setState(stateCopy)
+        let copyState = { ...this.state }
+        copyState.etape = "1"
+        copyState.gagnant = ""
+        copyState.choix = ""
+        copyState.choixOrdi = ""
+        this.setState(copyState)
     }
 
     render() {
@@ -100,7 +100,7 @@ class Body extends Component {
             //         test
             //     </div>
             // </div>
-                    <div className="body-2 container-fluid d-flex justify-content-center align-items-center">
+                    <div className="body-2 row container-fluid d-flex mx-auto justify-content-center align-items-center p-0">
                         <div className="column1 col-6 justify-content-center align-items-center text-center px-2">
                             {
                                 this.state.choix === "paper" &&
@@ -157,12 +157,24 @@ class Body extends Component {
                         }
                         {
                             this.state.choixOrdi === "" &&
-                            <p></p>
+                            <div className="button border4 my-3">
+                                {/* <button className="border scissors rounded-circle">
+                                    <img src="./img/icon-scissors.svg" alt="scissors" className="img-fluid" />
+                                </button> */}
+                            </div>
                         }
                         <h5 className="my-3">THE HOUSE PICKED</h5>
                     </div>
-                    {this.state.choixOrdi === "" ?
-                    <button onClick={this.validate}>Validate</button>: <button onClick={this.playAgain}>Play again</button>}
+                    {this.state.choixOrdi === "" 
+                    ?
+                    <div className="row">
+                        <button className="buttonPlay mx-auto" onClick={this.validate}>Validate</button>
+                    </div>
+                    : 
+                    <div className="row">
+                        <button className="buttonPlay mx-auto" onClick={this.playAgain}>Play again</button>
+                    </div>
+                    }
                 </div>
                 }
         <Footer modal={this.state.modal} showModal={this.showModal}/>
